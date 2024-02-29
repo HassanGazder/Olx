@@ -1,0 +1,23 @@
+<div class="container">
+
+<form (ngSubmit)="onSubmit(productForm.value)" #productForm="ngForm">
+    <div class="form-group">
+      <label for="pname">Product Name:</label>
+      <input type="text" class="form-control" id="pname" name="pname" [(ngModel)]="product.pname" required>
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" class="form-control" id="price" name="price" [(ngModel)]="product.price" required>
+    </div>
+    <div class="form-group">
+      <label for="pimage">Image URL:</label>
+      <input type="text" class="form-control" id="pimage" name="pimage" [(ngModel)]="product.pimage" required>
+    </div>
+    <div class="form-group">
+      <label for="pdescription">Description:</label>
+      <textarea class="form-control" id="pdescription" name="pdescription" [(ngModel)]="product.pdescription" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3" [disabled]="!productForm.valid">Add Product</button>
+  </form>
+</div>
+  

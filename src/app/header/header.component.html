@@ -1,0 +1,141 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div
+    class="container d-flex flex-column align-items-start justify-content-center"
+  >
+    <!-- Top Layer -->
+    <div class="navbar-nav">
+      <a class="nav-link active fs-1 fw-bold" href="#">Olx</a>
+      <a class="nav-link" href="#"
+        ><i class="fa-solid fa-car me-2 mt-4"></i>Motors</a
+      >
+      <a class="nav-link" href="#"
+        ><i class="fa-solid fa-building me-2 mt-4"></i>Property</a
+      >
+    </div>
+
+    <!-- Spacer -->
+    <!-- <div class="flex-fill"></div> -->
+
+    <!-- Bottom Layer -->
+    <div class="navbar-nav ml-auto">
+      <div class="dropdown dropdown-input">
+        <button
+          class="btn btn-secondary dropdown-toggle d-flex justify-content-between align-items-center"
+          type="button"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-location-dot me-4"></i
+          ><span class="">Pakistan</span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+      <form class="form-inline my-2 my-lg-0 mr-3">
+        <div class="input-group d-flex align-items-center">
+          <input
+            class="form-control mr-sm-2 search-input"
+            type="search"
+            placeholder="Find cars mobile phones and more"
+            aria-label="Search"
+          />
+          <div class="input-group-append">
+            <span
+              style="height: 50px"
+              class="input-group-text d-flex align-items-center"
+            >
+              <i class="fas fa-search" style="font-size: 20px"></i>
+            </span>
+          </div>
+        </div>
+      </form>
+
+      <!-- Modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Login
+      </button>
+
+      <!-- Modal -->
+      <!-- Modal -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ isLoginForm ? 'Login' : 'Signup' }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <!-- Display login form if isLoginForm is true, otherwise display signup form -->
+          <form #userForm="ngForm" (ngSubmit)="isLoginForm ? login(userForm.value) : signup(userForm.value)">
+            <div class="mb-3" *ngIf="isLoginForm">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp" ngModel name="email" required />
+              <div *ngIf="userForm.submitted && !userForm.controls['email'].valid" class="text-danger">Email is required</div>
+            </div>
+            <div class="mb-3" *ngIf="isLoginForm">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control w-100" id="exampleInputPassword1" ngModel name="password" required />
+              <div *ngIf="userForm.submitted && !userForm.controls['password'].valid" class="text-danger">Password is required</div>
+            </div>
+            <!-- Display fields for signup form -->
+            <div class="mb-3" *ngIf="!isLoginForm">
+              <label for="exampleInputName" class="form-label">Name</label>
+              <input type="text" class="form-control w-100" id="exampleInputName" ngModel name="name" required />
+              <div *ngIf="userForm.submitted && !userForm.controls['name'].valid" class="text-danger">Name is required</div>
+            </div>
+            <div class="mb-3" *ngIf="!isLoginForm">
+              <label for="exampleInputEmail2" class="form-label">Email address</label>
+              <input type="email" class="form-control w-100" id="exampleInputEmail2" aria-describedby="emailHelp" ngModel name="email" required />
+              <div *ngIf="userForm.submitted && !userForm.controls['email'].valid" class="text-danger">Email is required</div>
+            </div>
+            <div class="mb-3" *ngIf="!isLoginForm">
+              <label for="exampleInputPassword2" class="form-label">Password</label>
+              <input type="password" class="form-control w-100" id="exampleInputPassword2" ngModel name="password" required />
+              <div *ngIf="userForm.submitted && !userForm.controls['password'].valid" class="text-danger">Password is required</div>
+            </div>
+            <!-- Disable the button if the form is invalid -->
+            <button type="submit" class="btn btn-primary login-button" [disabled]="!userForm.valid">{{ isLoginForm ? 'Login' : 'Signup' }}</button>
+            <p class="text-center">If you don't have an account <a href="#" (click)="toggleForm()">{{ isLoginForm ? 'signup' : 'login' }}</a></p>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      <!-- Modal -->
+      <button title="Sell" class="b7016787" fdprocessedid="mz8g0a">
+        <img
+          src="https://www.olx.com.pk/assets/iconSellBorder_noinline.d9eebe038fbfae9f90fd61d971037e02.svg"
+          class="af24d916"
+          alt="Button border"
+        />
+        <div class="_1075545d a662c662 _42f36e3b _96d4439a">
+          <img
+            src="https://www.olx.com.pk/assets/iconPlusSell_noinline.75fc7ea23e80b50447cf5757d8ef083a.svg"
+            class="_332d1801"
+            alt="Plus icon"
+          />
+          <span class="_6d5b4928 be13fe44 _4331a6af">Sell</span>
+        </div>
+      </button>
+    </div>
+  </div>
+</nav>

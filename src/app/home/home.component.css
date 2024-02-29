@@ -1,0 +1,13 @@
+.container .main-div{
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.container .main-div img{
+    width: 100%;
+    height: 100px;
+}
+.container .cards-div .card .title-icon{
+    display: flex;
+    justify-content: space-between;
+}
